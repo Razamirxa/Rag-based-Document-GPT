@@ -1,7 +1,6 @@
 streamlit
-streamlit-chat
+streamlit_chat
 langchain
-langchain-core
 langchain_community
 qdrant-client
 google-auth
@@ -10,3 +9,7 @@ python-dotenv
 PyPDF2
 python-docx
 pandas
+fitz
+requests
+llm_model
+starlette
