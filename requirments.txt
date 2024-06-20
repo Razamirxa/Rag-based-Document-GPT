@@ -11,5 +11,7 @@ python-docx
 pandas
 fitz
 requests
-llm_model
 starlette
+langchain-google-genai
+sentence-transformers
+faiss-cpu
