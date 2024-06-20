@@ -1,20 +1,12 @@
 import os
 import streamlit as st
 from streamlit_chat import message
-from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
-from langchain_core.documents import Document
-from langchain_community.vectorstores import Qdrant
-from qdrant_client import QdrantClient
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import StrOutputParser
-from langchain.memory import ConversationBufferMemory
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough, RunnableParallel
-from langchain_community.document_loaders.csv_loader import CSVLoader
-from langchain.chains import ConversationalRetrievalChain
-from langchain.document_loaders import Docx2txtLoader
 from langchain.vectorstores import FAISS
 import pandas as pd
 from PyPDF2 import PdfReader
@@ -113,7 +105,7 @@ def rag(vector_db, input_query, google_api_key):
         template = """You are an AI assistant that assists users by providing answers to their questions by extracting information from the provided context:
         {context}.
         If you do not find any relevant information from context for the given question, simply say 'I do not know'. Do not try to make up an answer.
-        Answer should not be greater than 3 lines.
+        Answer should not be greater than 5 lines.
         Question: {question}
         """
 
