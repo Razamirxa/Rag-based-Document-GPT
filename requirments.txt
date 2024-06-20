@@ -16,3 +16,4 @@ starlette
 langchain-google-genai
 sentence-transformers
 faiss-cpu
+https://github.com/Razamirxa/Rag-based-Document-GPT.git
